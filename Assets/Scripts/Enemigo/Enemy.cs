@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
     private bool isDead = false;
     public ParticleSystem enemyHit;
     public ParticleSystem attackParticles;
+    public DoTweenHardEnemy doTweenHardEnemy;
+
 
     void Start()
     {
@@ -73,7 +75,12 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        if (doTweenHardEnemy != null)
+        {
+            doTweenHardEnemy.movementStop();
+        }
         
+
         isDead = true;
 
         

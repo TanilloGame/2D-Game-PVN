@@ -15,7 +15,9 @@ public class PlayerHealth : MonoBehaviour
     public float flashInterval = 0.1f;    
     private bool isKnockedback = false;
 
-    public LayerMask enemyLayer;                
+    public LayerMask enemyLayer;
+    public LayerMask drownLayer;
+    public LayerMask spikeLayer;
     public Animator animator;                  
     public string deathAnimationName = "Death"; 
 
@@ -25,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
 
     private bool isDead = false;                
     public ParticleSystem damageParticles;
+    public ParticleSystem drownParticles;
 
     void Start()
     {
@@ -54,6 +57,27 @@ public class PlayerHealth : MonoBehaviour
                 Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
                 TakeDamage(1, knockbackDirection);
                 damageParticles.Play();
+            }
+        }
+
+        if (((1 << collision.gameObject.layer) & spikeLayer) != 0)
+        {
+
+            if (!isInvulnerable && !isDead)
+            {
+                Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+                TakeDamage(3, knockbackDirection);
+                damageParticles.Play();
+            }
+        }
+        if (((1 << collision.gameObject.layer) & drownLayer) != 0)
+        {
+
+            if (!isInvulnerable && !isDead)
+            {
+                Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
+                TakeDamage(99, knockbackDirection);
+                drownParticles.Play();
             }
         }
     }
