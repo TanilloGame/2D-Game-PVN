@@ -22,6 +22,7 @@ public class MeleeAttack : MonoBehaviour
         {
             
             Attack();
+            AudioManager.Instance.PlaySound("Attack");
         }
     }
 
@@ -35,7 +36,7 @@ public class MeleeAttack : MonoBehaviour
         
         foreach (Collider2D enemy in hitEnemies)
         {
-            
+            AudioManager.Instance.PlaySound("EnemyºDamage");
             Vector2 knockbackDirection = (enemy.transform.position - transform.position).normalized;
 
             

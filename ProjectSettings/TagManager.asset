@@ -7,6 +7,9 @@ TagManager:
   - coin
   - Enemy
   - Door
+  - Coin
+  - Heart
+  - FinalBoss
   layers:
   - Default
   - TransparentFX
@@ -18,8 +21,8 @@ TagManager:
   - Enemy
   - Spike
   - WaterDrown
-  - 
-  - 
+  - Coin
+  - FinalBoss
   - 
   - 
   - 

@@ -74,6 +74,7 @@ public class Player : MonoBehaviour
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        
 
 
         if (moveInput > 0 && !facingRight)
@@ -108,11 +109,13 @@ public class Player : MonoBehaviour
             Jump();
             isJumping = true;
             jumpingParticle.Play();
+            AudioManager.Instance.PlaySound("Jump");
         }
         
         else if (Input.GetButtonDown("Jump") && canDoubleJump && !isGrounded)
         {
             Jump();
+            AudioManager.Instance.PlaySound("Jump");
             canDoubleJump = false;
         }
 

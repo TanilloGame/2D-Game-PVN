@@ -39,9 +39,9 @@ public class Spikes : MonoBehaviour
         knockbackDirection = knockbackDir;
         isKnockedBack = true;
         knockbackTime = 0f;
-        
+        AudioManager.Instance.PlaySound("Damage");
 
-        
+
     }
 
     void KnockbackUpdate()
