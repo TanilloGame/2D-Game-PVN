@@ -4219,7 +4219,7 @@ Animator:
   m_GameObject: {fileID: 767511452}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 005c57f8aefa6cd48b611a56b207f651, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7c89438fe77f6c74193aa8ef246fcb58, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5378,6 +5378,7 @@ GameObject:
   - component: {fileID: 1412292919}
   - component: {fileID: 1412292918}
   - component: {fileID: 1412292922}
+  - component: {fileID: 1412292923}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5485,6 +5486,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surveyButton: {fileID: 601594352}
+--- !u!95 &1412292923
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412292917}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9977932494b37224e8ade45887693847, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1440131998
 PrefabInstance:
   m_ObjectHideFlags: 0
