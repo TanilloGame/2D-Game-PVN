@@ -14,6 +14,19 @@ public class MainMenu : MonoBehaviour
         surveyButton.onClick.AddListener(FillSurvey); // Asocia el método FillSurvey al botón de encuesta
     }
 
+   
+
+    public void LoadOptionsScene()
+    {
+        SceneManager.LoadScene("Options");
+
+    }
+
+    public void LoadMainMenuScene()
+    {
+        SceneManager.LoadScene("MainMenu"); // Asegúrate de usar el nombre exacto de tu escena del menú principal
+    }
+
     // Método para iniciar una nueva partida
     public void StartNewGame()
     {

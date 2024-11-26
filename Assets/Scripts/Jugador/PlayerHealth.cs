@@ -66,7 +66,7 @@ public class PlayerHealth : MonoBehaviour
             if (!isInvulnerable && !isDead)
             {
                 Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-                TakeDamage(4, knockbackDirection);
+                TakeDamage(3, knockbackDirection);
                 damageParticles.Play();
             }
         }
@@ -76,7 +76,7 @@ public class PlayerHealth : MonoBehaviour
             if (!isInvulnerable && !isDead)
             {
                 Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
-                TakeDamage(3, knockbackDirection);
+                TakeDamage(1, knockbackDirection);
                 damageParticles.Play();
             }
         }
